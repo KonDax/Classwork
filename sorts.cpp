@@ -29,6 +29,8 @@ void insertion_sort(int *ar, int size){
 
 void count_sort(int *ar, int size, int left_front_nums, int right_front_nums){
 	int null_ar[right_front_nums];
+//here I recomend use the new function ... or use memset(....)
+//null_ar is not good name!
 	for (int i = left_front_nums; i <= right_front_nums; i++){
 		null_ar[i] = 0;
 	}
