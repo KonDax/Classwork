@@ -27,9 +27,9 @@ void insertion_sort(int *ar, int size){
 	}
 }
 
-void count_sort(int *ar, int size, int left_front_nums, int right_front_nums){
-	int null_ar[right_front_nums];
-	for (int i = left_front_nums; i <= right_front_nums; i++){
+void count_sort(int *ar, int size, int min, int max){
+	int null_ar[max];
+	for (int i = min; i <= max; i++){
 		null_ar[i] = 0;
 	}
 
@@ -38,11 +38,10 @@ void count_sort(int *ar, int size, int left_front_nums, int right_front_nums){
 	}
 
 	int k = 0;
-	for (int i = left_front_nums; i <= right_front_nums; i++){
+	for (int i = min; i <= max; i++){
 		for (int j = k; j < k + null_ar[i]; j++){
 			ar[j] = i;
 		}
 		k += null_ar[i];
 	}
 }
-

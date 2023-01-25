@@ -16,14 +16,15 @@ void show_ar(int* ar, int size, char element){
 
 void show_Big_ar(int* ar, int size, char element){
 	int count;
-	for (int k = 1; k < size; k+=count){
-		std::cout << ar[k-1] << element;
-		for (int i = k; (i < 9+k) && ar[i-1]==ar[i]; i++){
+	for (int k = 0; k < size; k+=count){
+		for (int i = k; (i < 9+k) && ar[i]==ar[i+1]; i++){
 			std::cout << ar[i] << element;
 		}
+		std::cout << ar[k] << element;
 		count = get_Count_Number(ar, size, ar[k]);
 		if (count > 10)
-			std::cout << "- " << count-10 << element;
+			std::cout << "- " << count-10;
+		std::cout << std::endl;
 	}
 	std::cout << std::endl;
 }

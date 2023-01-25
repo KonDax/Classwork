@@ -4,9 +4,9 @@
 #include <iostream>
 #include <time.h>
 
-void random_Fill_ar(int*, int, int, int);
-void show_ar(int*, int, char);
-void show_Big_ar(int*, int, char);
+void random_Fill_ar(int*, int, int = 0, int = 255);
+void show_ar(int*, int, char = ' ');
+void show_Big_ar(int*, int, char = ' ');
 void swap(int&, int&);
 int max_ind(int*, int, int);
 int min_ind(int*, int, int);
