@@ -1,5 +1,6 @@
 #include "sorts.hpp"
 #include "array.hpp"
+#include "recursive.hpp"
 #include <iostream>
 
 int main(){
@@ -12,6 +13,8 @@ int main(){
 	show_ar(ar, size);
 
 	std::cout << "Минимальный элемент массива:\n" << get_min(ar, size) << std::endl;
+
+	std::cout << "Максимальный элемент массива:\n" << get_max(ar, size) << std::endl;
 
 	std::cout << "\nСортировка подсчётом:" << std::endl;
 	count_sort(ar, size);
